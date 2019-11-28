@@ -8,29 +8,9 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class PlaygroundComponent implements OnInit {
   status = false;
 
+  cities = ['Bengaluru', 'Mysuru', 'Hubballi', 'Bidar'];
+
   ngOnInit() {}
-
-  cssString() {
-    return 'text-danger';
-  }
-
-  cssStringArray() {
-    return ['text-primary', 'font-italic'];
-  }
-
-  cssConfig() {
-    return {
-      'text-success': true,
-      'font-weight-bold': true
-    };
-  }
-
-  styleConfig() {
-    return {
-      color: 'blue',
-      border: '1px solid green'
-    };
-  }
 
   handler() {
     this.status = !this.status;

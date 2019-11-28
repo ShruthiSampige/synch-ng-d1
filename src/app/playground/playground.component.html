@@ -1,24 +1,11 @@
-<p [ngClass]="cssString()">This is my text</p>
-<p [ngClass]="cssStringArray()">This is my text</p>
-<p [ngClass]="cssConfig()">This is my text</p>
-
-<hr />
-<p [ngStyle]="styleConfig()">This is my text</p>
-
-<hr />
-
-<input
-  type="text"
-  class="form-control"
-  value="Default Input"
-  [disabled]="status"
-/>
-<hr />
-<input
-  type="text"
-  class="form-control"
-  value="Default Input2"
-  [readOnly]="status"
-/>
-<hr />
 <button (click)="handler()" class="btn btn-primary">Click</button>
+<hr />
+
+<h2 *ngIf="status">Hello there!</h2>
+<h2 *ngIf="!status">Hello again!</h2>
+
+<hr />
+
+<ul>
+  <li *ngFor="let city of cities">{{ city }}</li>
+</ul>
