@@ -11,4 +11,8 @@ export class AppComponent {
   foo() {
     return 'another title being returned here';
   }
+
+  clickHandler(args) {
+    console.log('Clicked', args);
+  }
 }
