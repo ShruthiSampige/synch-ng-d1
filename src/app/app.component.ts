@@ -5,14 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Here is my title';
-
-  foo() {
-    return 'another title being returned here';
-  }
-
-  clickHandler(args) {
-    console.log('Clicked', args);
-  }
-}
+export class AppComponent {}
