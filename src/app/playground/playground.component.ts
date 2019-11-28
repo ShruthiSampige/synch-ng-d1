@@ -6,16 +6,33 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
-  @Input() title: string;
-  @Output() loginEvent = new EventEmitter();
-
-  counter = 0;
-
-  constructor() {}
+  status = false;
 
   ngOnInit() {}
 
-  clickHandler() {
-    this.counter++;
+  cssString() {
+    return 'text-danger';
+  }
+
+  cssStringArray() {
+    return ['text-primary', 'font-italic'];
+  }
+
+  cssConfig() {
+    return {
+      'text-success': true,
+      'font-weight-bold': true
+    };
+  }
+
+  styleConfig() {
+    return {
+      color: 'blue',
+      border: '1px solid green'
+    };
+  }
+
+  handler() {
+    this.status = !this.status;
   }
 }
