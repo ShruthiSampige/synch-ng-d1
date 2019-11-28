@@ -5,12 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MyCurrencyPipe implements PipeTransform {
   transform(value: number, ...args: string[]): string {
-    let paramList = '';
-
-    args.forEach((a, i) => {
-      paramList += `Param ${a} at ${i}; `;
-    });
-
-    return `CURRENCY: ${value} ${paramList}`;
+    switch (args[0]) {
+      case 'INR':
+        return `INR: ${value.toFixed(2)}`;
+      case 'USD':
+        return `$: ${value.toFixed(2)}`;
+      case 'EUR':
+        return `EUR: ${value.toFixed(2)}`;
+      default:
+        return `Unknown: ${value.toFixed(2)}`;
+    }
   }
 }
