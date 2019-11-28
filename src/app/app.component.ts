@@ -9,4 +9,8 @@ export class AppComponent {
   get title() {
     return 'Title goes here!';
   }
+
+  parentHandler(args) {
+    console.log('Parent called', args);
+  }
 }

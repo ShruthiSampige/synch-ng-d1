@@ -1,5 +1,8 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-  <app-playground [title]="title"></app-playground>
+  <app-playground
+    [title]="title"
+    (loginEvent)="parentHandler($event)"
+  ></app-playground>
 </div>
