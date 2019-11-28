@@ -2,4 +2,10 @@
 
 <hr />
 
-<button class="btn btn-primary" (click)="clickHandler()">Login</button>
+<input type="text" value="{{ counter }}" [className]="'form-control'" />
+
+<h2 [textContent]="counter"></h2>
+
+<button class="btn btn-primary" (click)="clickHandler()">
+  Click <span class="badge badge-light" [textContent]="counter"></span>
+</button>

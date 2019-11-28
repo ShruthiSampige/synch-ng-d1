@@ -9,14 +9,13 @@ export class PlaygroundComponent implements OnInit {
   @Input() title: string;
   @Output() loginEvent = new EventEmitter();
 
+  counter = 0;
+
   constructor() {}
 
   ngOnInit() {}
 
   clickHandler() {
-    this.loginEvent.emit({
-      on: new Date(),
-      message: 'Custom event emitted from the playground'
-    });
+    this.counter++;
   }
 }
