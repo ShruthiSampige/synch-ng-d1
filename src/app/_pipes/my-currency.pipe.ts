@@ -5,6 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MyCurrencyPipe implements PipeTransform {
   transform(value: number, ...args: string[]): string {
+    //  More on template literals in JavaScript here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+    //  More on JavaScript array API here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
     switch (args[0]) {
       case 'INR':
         return `INR: ${value.toFixed(2)}`;
