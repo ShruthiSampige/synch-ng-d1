@@ -7,6 +7,8 @@ export class IfCloneDirective {
   @Input() set appIfClone(predicate: boolean) {
     if (predicate) {
       this.viewContainerRef.createEmbeddedView(this.templateRef);
+    } else {
+      this.viewContainerRef.clear();
     }
   }
   constructor(
