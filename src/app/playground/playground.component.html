@@ -1,1 +1,10 @@
-<p [prop]="'text-danger'" [appPremium]="'font-weight-bold'">Header is here</p>
+<h3>Content Projection Demo</h3>
+<hr />
+<ng-content select=".my-class"></ng-content>
+<hr />
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+<ng-content select="p"></ng-content>
+<hr />
+<ng-content></ng-content>
