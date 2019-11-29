@@ -6,6 +6,7 @@ import { MyCurrencyPipe } from './_pipes/my-currency.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PlaygroundComponent } from './playground/playground.component';
 import { PremiumDirective } from './_directives/premium.directive';
+import { IfCloneDirective } from './_directives/if-clone.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PremiumDirective } from './_directives/premium.directive';
     MyCurrencyPipe,
     NavbarComponent,
     PlaygroundComponent,
-    PremiumDirective
+    PremiumDirective,
+    IfCloneDirective
   ],
   imports: [BrowserModule],
   providers: [],

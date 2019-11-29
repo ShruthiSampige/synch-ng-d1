@@ -14,8 +14,9 @@ import {
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent {
-  @ViewChild('para', { static: true }) set pEl(value: ElementRef) {
-    console.log('Element', value);
-    value.nativeElement.className = 'font-weight-bold';
+  flag = true;
+
+  handler() {
+    this.flag = !this.flag;
   }
 }
