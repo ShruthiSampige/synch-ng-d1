@@ -1,35 +1,8 @@
-<button (click)="handler()" class="btn btn-primary">Click</button>
-<hr />
+<h2 appPremium></h2>
 
-<h2 *ngIf="status; else anotherHeader">Hello there!</h2>
-<h2 *ngIf="!status">Hello again!</h2>
-
-<ng-template #anotherHeader>
-  <h3 *ngIf="false; else elseIf">Else block is called</h3>
-</ng-template>
-
-<ng-template #elseIf>
-  <h3>else if simulation</h3>
-</ng-template>
-
-<hr />
-
-<ul>
-  <li *ngFor="let city of cities; index as i; first as f; last as l">
-    {{ city }} >> {{ i }} >> {{ f ? 'First' : 'Not first' }} >>
-    {{ l ? 'Last' : 'Not last' }}
-  </li>
-</ul>
-
-<hr />
-
-<ng-container [ngSwitch]="language">
-  <div class="alert alert-primary" role="alert" *ngSwitchCase="'English'">
-    English Greeting
-  </div>
-  <div class="alert alert-warning" role="alert" *ngSwitchCase="'Kannada'">
-    Kannada Greeting
-  </div>
-
-  <div *ngSwitchDefault>Default greeting</div>
-</ng-container>
+<div>
+  <p appPremium>Paragraph 1</p>
+  <p>Paragraph 1</p>
+  <p>Paragraph 1</p>
+  <p appPremium>Paragraph 1</p>
+</div>

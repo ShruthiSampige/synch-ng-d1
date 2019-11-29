@@ -5,16 +5,4 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.css']
 })
-export class PlaygroundComponent implements OnInit {
-  status = false;
-  language = 'English';
-
-  cities = ['Bengaluru', 'Mysuru', 'Hubballi', 'Bidar'];
-
-  ngOnInit() {}
-
-  handler() {
-    this.status = !this.status;
-    this.language = 'Kannada';
-  }
-}
+export class PlaygroundComponent {}
