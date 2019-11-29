@@ -1,9 +1,5 @@
-<ng-template [appIfClone]="flag">
-  <h1>Header goes here!</h1>
-</ng-template>
+<h2>Hello {{ counter }}</h2>
 
-<hr />
+<ng-content></ng-content>
 
-<h1>Header 2</h1>
-
-<button class="btn btn-primary" (click)="handler()">Change</button>
+<button (click)="handler()">Click</button>

@@ -5,7 +5,12 @@ import {
   EventEmitter,
   Output,
   ViewChild,
-  ElementRef
+  ElementRef,
+  AfterViewInit,
+  OnChanges,
+  SimpleChanges,
+  DoCheck,
+  AfterContentInit
 } from '@angular/core';
 
 @Component({
@@ -13,10 +18,46 @@ import {
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.css']
 })
-export class PlaygroundComponent {
-  flag = true;
+export class PlaygroundComponent
+  implements OnInit, AfterViewInit, OnChanges, DoCheck, AfterContentInit {
+  @Input() prop: string;
+
+  counter = 0;
+
+  constructor() {
+    console.log('constructor called');
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges', changes);
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit');
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit');
+  }
+
+  ngDoCheck(): void {
+    console.log('ngDoCheck');
+  }
+
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit');
+  }
+
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked for the component');
+  }
+
+  ngAfterContentChecked() {
+    console.log('ngAfterContentChecked for the projected content');
+  }
 
   handler() {
-    this.flag = !this.flag;
+    console.log('click');
+    this.counter++;
   }
 }
