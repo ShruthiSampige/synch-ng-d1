@@ -7,6 +7,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class PlaygroundComponent implements OnInit {
   status = false;
+  language = 'English';
 
   cities = ['Bengaluru', 'Mysuru', 'Hubballi', 'Bidar'];
 
@@ -14,5 +15,6 @@ export class PlaygroundComponent implements OnInit {
 
   handler() {
     this.status = !this.status;
+    this.language = 'Kannada';
   }
 }
