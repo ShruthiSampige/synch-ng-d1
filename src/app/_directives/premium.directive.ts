@@ -2,25 +2,30 @@ import {
   Directive,
   ElementRef,
   HostBinding,
-  HostListener
+  HostListener,
+  Input
 } from '@angular/core';
 
 @Directive({
   selector: '[appPremium]'
 })
 export class PremiumDirective {
+  private input: string;
+  private propField: string;
+
+  @Input() set appPremium(value: string) {
+    this.input = value;
+  }
+
+  @Input() set prop(value: string) {
+    this.propField = value;
+  }
+
   constructor() {}
 
-  @HostBinding('className') get cssProp() {
-    return 'font-weight-bold';
+  @HostBinding('className') get css() {
+    return `${this.input} ${this.propField}`;
   }
 
-  @HostBinding('textContent') prop = 'Header from the directive';
-  @HostBinding('style.color') color = 'red';
-  @HostBinding('style.border') border = '1px solid blue';
-
-  @HostListener('dblclick', ['$event'])
-  handler(args) {
-    console.log('Directive handler called', args);
-  }
+  @HostBinding('style.color') color;
 }
